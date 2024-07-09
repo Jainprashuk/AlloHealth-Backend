@@ -11,6 +11,7 @@ const GetMeals = async (req, res) => {
             Meals: GetAllMeals
         });
     } catch (error) {
+        console.log(error.message);
         res.status(500).send({
             message: 'Error Getting Meals',
             error: error.message
